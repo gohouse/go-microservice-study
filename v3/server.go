@@ -3,9 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-
 	proto "gitee.com/go-microservice-study/v3/protoc"
-
 	micro "github.com/micro/go-micro"
 )
 

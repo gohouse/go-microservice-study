@@ -5,9 +5,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-
 	proto "gitee.com/go-microservice-study/v3/protoc"
-
 	micro "github.com/micro/go-micro"
 )
 
@@ -26,7 +24,7 @@ func main() {
 	}
 }
 
-func req(helloservice proto.HelloClient, msg string)  {
+func req(helloservice proto.HelloClient, msg string) {
 	res, err := helloservice.Ping(context.TODO(), &proto.Request{Name: msg})
 	if err != nil {
 		fmt.Println(err)
