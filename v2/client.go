@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"context"
 	"fmt"
-	pb "gitee.com/go-microservice-study/v2/protoc"
+	pb "gohouse/go-microservice-study/v2/protoc"
 	"google.golang.org/grpc"
 	"log"
 	"os"

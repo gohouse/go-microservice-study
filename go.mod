@@ -1,4 +1,4 @@
-module gitee.com/go-microservice-study
+module gohouse/go-microservice-study
 
 go 1.12
 

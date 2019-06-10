@@ -5,7 +5,7 @@ import (
 	"log"
 	"net"
 	"google.golang.org/grpc"
-	pb "gitee.com/go-microservice-study/v2/protoc"
+	pb "gohouse/go-microservice-study/v2/protoc"
 	"google.golang.org/grpc/reflection"
 )
 

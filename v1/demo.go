@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gitee.com/go-microservice-study/v1/protoc"
+	"gohouse/go-microservice-study/v1/protoc"
 	"github.com/golang/protobuf/proto"
 	"log"
 )
