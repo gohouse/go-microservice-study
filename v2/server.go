@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	port = ":50051"
+	port = ":62019"
 )
 
 type server struct{} //服务对象
