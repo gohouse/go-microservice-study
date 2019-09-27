@@ -7,20 +7,27 @@ import (
 	micro "github.com/micro/go-micro"
 )
 
-type Hello struct{}
+type Greeter struct{}
 
-func (h *Hello) Ping(ctx context.Context, req *proto.Request, res *proto.Response) error {
-	res.Msg = "Hello " + req.Name
+func (g *Greeter) Hello(ctx context.Context, req *proto.HelloRequest, rsp *proto.HelloResponse) error {
+	rsp.Greeting = "Hello " + req.Name
 	return nil
 }
+
 func main() {
+	// Create a new service. Optionally include some options here.
 	service := micro.NewService(
-		micro.Name("hellooo"), // 服务名称
+		micro.Name("greeter"),
 	)
+
+	// Init will parse the command line flags.
 	service.Init()
-	proto.RegisterHelloHandler(service.Server(), new(Hello))
-	err := service.Run()
-	if err != nil {
+
+	// Register handler
+	proto.RegisterGreeterHandler(service.Server(), new(Greeter))
+
+	// Run the server
+	if err := service.Run(); err != nil {
 		fmt.Println(err)
 	}
 }

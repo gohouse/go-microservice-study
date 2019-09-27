@@ -1,6 +1,6 @@
 syntax = "proto3";  //语法声明
 
-package helloworld; //包名
+package protoc; //包名
 
 // Greeter 微服务
 service Greeter {

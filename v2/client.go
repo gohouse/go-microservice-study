@@ -23,9 +23,6 @@ func main() {
 	defer conn.Close()
 	c := pb.NewGreeterClient(conn)
 
-	//// 10秒的上下文
-	//ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
-	//defer cancel()
 	// 请求服务
 	req(c, "world ^_^")
 	// 以下是为了可以多次模拟请求写的, 可有可无
