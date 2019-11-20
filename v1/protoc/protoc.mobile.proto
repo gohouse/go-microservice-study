@@ -1,9 +1,0 @@
-// 请认真对待 proto 文件的文件名，常用规则packageName.MessageName.proto
-// 故此包名, 命名为 electronic.mobile.proto
-syntax = "proto3"; // 指定语法格式，proto3
-package protoc; // 指定生成的 electronic.mobile.pb.go 的包名，防止命名冲突
-
-message Mobile {
-    string brand = 1; // 手机品牌
-}
-
